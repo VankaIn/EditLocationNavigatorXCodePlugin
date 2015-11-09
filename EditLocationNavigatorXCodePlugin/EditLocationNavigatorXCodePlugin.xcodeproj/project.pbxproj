@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5318F0A81BF0ACB200E15581 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5318F0A71BF0ACB200E15581 /* AppKit.framework */; };
+		5318F0AA1BF0ACB200E15581 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5318F0A91BF0ACB200E15581 /* Foundation.framework */; };
+		5318F0AE1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 5318F0AD1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme */; };
+		5318F0B11BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5318F0B01BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m */; };
+		5318F0B41BF0ACB200E15581 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5318F0B31BF0ACB200E15581 /* NSObject_Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5318F0A41BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditLocationNavigatorXCodePlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		5318F0A71BF0ACB200E15581 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		5318F0A91BF0ACB200E15581 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		5318F0AD1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = EditLocationNavigatorXCodePlugin.xcscheme; path = EditLocationNavigatorXCodePlugin.xcodeproj/xcshareddata/xcschemes/EditLocationNavigatorXCodePlugin.xcscheme; sourceTree = SOURCE_ROOT; };
+		5318F0AF1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditLocationNavigatorXCodePlugin.h; sourceTree = "<group>"; };
+		5318F0B01BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditLocationNavigatorXCodePlugin.m; sourceTree = "<group>"; };
+		5318F0B21BF0ACB200E15581 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		5318F0B31BF0ACB200E15581 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		5318F0B51BF0ACB200E15581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5318F0A21BF0ACB200E15581 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5318F0A81BF0ACB200E15581 /* AppKit.framework in Frameworks */,
+				5318F0AA1BF0ACB200E15581 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5318F09B1BF0ACB200E15581 = {
+			isa = PBXGroup;
+			children = (
+				5318F0AB1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin */,
+				5318F0A61BF0ACB200E15581 /* Frameworks */,
+				5318F0A51BF0ACB200E15581 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5318F0A51BF0ACB200E15581 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5318F0A41BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5318F0A61BF0ACB200E15581 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5318F0A71BF0ACB200E15581 /* AppKit.framework */,
+				5318F0A91BF0ACB200E15581 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5318F0AB1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				5318F0AF1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.h */,
+				5318F0B01BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m */,
+				5318F0B21BF0ACB200E15581 /* NSObject_Extension.h */,
+				5318F0B31BF0ACB200E15581 /* NSObject_Extension.m */,
+				5318F0B51BF0ACB200E15581 /* Info.plist */,
+				5318F0AC1BF0ACB200E15581 /* Supporting Files */,
+			);
+			path = EditLocationNavigatorXCodePlugin;
+			sourceTree = "<group>";
+		};
+		5318F0AC1BF0ACB200E15581 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5318F0AD1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5318F0A31BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5318F0B81BF0ACB200E15581 /* Build configuration list for PBXNativeTarget "EditLocationNavigatorXCodePlugin" */;
+			buildPhases = (
+				5318F0A01BF0ACB200E15581 /* Sources */,
+				5318F0A11BF0ACB200E15581 /* Resources */,
+				5318F0A21BF0ACB200E15581 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EditLocationNavigatorXCodePlugin;
+			productName = EditLocationNavigatorXCodePlugin;
+			productReference = 5318F0A41BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5318F09C1BF0ACB200E15581 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = LevinYan;
+				TargetAttributes = {
+					5318F0A31BF0ACB200E15581 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 5318F09F1BF0ACB200E15581 /* Build configuration list for PBXProject "EditLocationNavigatorXCodePlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5318F09B1BF0ACB200E15581;
+			productRefGroup = 5318F0A51BF0ACB200E15581 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5318F0A31BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5318F0A11BF0ACB200E15581 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5318F0AE1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5318F0A01BF0ACB200E15581 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5318F0B11BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m in Sources */,
+				5318F0B41BF0ACB200E15581 /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5318F0B61BF0ACB200E15581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		5318F0B71BF0ACB200E15581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		5318F0B91BF0ACB200E15581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = EditLocationNavigatorXCodePlugin/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = YY.EditLocationNavigatorXCodePlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		5318F0BA1BF0ACB200E15581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = EditLocationNavigatorXCodePlugin/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = YY.EditLocationNavigatorXCodePlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5318F09F1BF0ACB200E15581 /* Build configuration list for PBXProject "EditLocationNavigatorXCodePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5318F0B61BF0ACB200E15581 /* Debug */,
+				5318F0B71BF0ACB200E15581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5318F0B81BF0ACB200E15581 /* Build configuration list for PBXNativeTarget "EditLocationNavigatorXCodePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5318F0B91BF0ACB200E15581 /* Debug */,
+				5318F0BA1BF0ACB200E15581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5318F09C1BF0ACB200E15581 /* Project object */;
+}
