@@ -1,8 +1,8 @@
 //
 //  NSObject_Extension.h
-//  EditLocationNavigatorXCodePlugin
+//  EditLocator
 //
-//  Created by LevinYan on 15/11/9.
+//  Created by LevinYan on 15/11/4.
 //  Copyright © 2015年 LevinYan. All rights reserved.
 //
 

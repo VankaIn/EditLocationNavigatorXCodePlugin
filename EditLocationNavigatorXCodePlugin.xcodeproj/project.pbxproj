@@ -10,8 +10,10 @@
 		5318F0A81BF0ACB200E15581 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5318F0A71BF0ACB200E15581 /* AppKit.framework */; };
 		5318F0AA1BF0ACB200E15581 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5318F0A91BF0ACB200E15581 /* Foundation.framework */; };
 		5318F0AE1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 5318F0AD1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme */; };
-		5318F0B11BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5318F0B01BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m */; };
-		5318F0B41BF0ACB200E15581 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5318F0B31BF0ACB200E15581 /* NSObject_Extension.m */; };
+		5318F0C21BF0AD8000E15581 /* EditLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5318F0BC1BF0AD8000E15581 /* EditLocator.m */; };
+		5318F0C31BF0AD8000E15581 /* ELModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5318F0BE1BF0AD8000E15581 /* ELModel.m */; };
+		5318F0C41BF0AD8000E15581 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5318F0BF1BF0AD8000E15581 /* Info.plist */; };
+		5318F0C51BF0AD8000E15581 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5318F0C11BF0AD8000E15581 /* NSObject_Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,11 +21,13 @@
 		5318F0A71BF0ACB200E15581 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		5318F0A91BF0ACB200E15581 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		5318F0AD1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = EditLocationNavigatorXCodePlugin.xcscheme; path = EditLocationNavigatorXCodePlugin.xcodeproj/xcshareddata/xcschemes/EditLocationNavigatorXCodePlugin.xcscheme; sourceTree = SOURCE_ROOT; };
-		5318F0AF1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditLocationNavigatorXCodePlugin.h; sourceTree = "<group>"; };
-		5318F0B01BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditLocationNavigatorXCodePlugin.m; sourceTree = "<group>"; };
-		5318F0B21BF0ACB200E15581 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
-		5318F0B31BF0ACB200E15581 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
-		5318F0B51BF0ACB200E15581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5318F0BB1BF0AD8000E15581 /* EditLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditLocator.h; sourceTree = "<group>"; };
+		5318F0BC1BF0AD8000E15581 /* EditLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditLocator.m; sourceTree = "<group>"; };
+		5318F0BD1BF0AD8000E15581 /* ELModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELModel.h; sourceTree = "<group>"; };
+		5318F0BE1BF0AD8000E15581 /* ELModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELModel.m; sourceTree = "<group>"; };
+		5318F0BF1BF0AD8000E15581 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5318F0C01BF0AD8000E15581 /* NSObject_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		5318F0C11BF0AD8000E15581 /* NSObject_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +72,13 @@
 		5318F0AB1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin */ = {
 			isa = PBXGroup;
 			children = (
-				5318F0AF1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.h */,
-				5318F0B01BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m */,
-				5318F0B21BF0ACB200E15581 /* NSObject_Extension.h */,
-				5318F0B31BF0ACB200E15581 /* NSObject_Extension.m */,
-				5318F0B51BF0ACB200E15581 /* Info.plist */,
+				5318F0BB1BF0AD8000E15581 /* EditLocator.h */,
+				5318F0BC1BF0AD8000E15581 /* EditLocator.m */,
+				5318F0BD1BF0AD8000E15581 /* ELModel.h */,
+				5318F0BE1BF0AD8000E15581 /* ELModel.m */,
+				5318F0BF1BF0AD8000E15581 /* Info.plist */,
+				5318F0C01BF0AD8000E15581 /* NSObject_Extension.h */,
+				5318F0C11BF0AD8000E15581 /* NSObject_Extension.m */,
 				5318F0AC1BF0ACB200E15581 /* Supporting Files */,
 			);
 			path = EditLocationNavigatorXCodePlugin;
@@ -142,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5318F0C41BF0AD8000E15581 /* Info.plist in Resources */,
 				5318F0AE1BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.xcscheme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,8 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5318F0B11BF0ACB200E15581 /* EditLocationNavigatorXCodePlugin.m in Sources */,
-				5318F0B41BF0ACB200E15581 /* NSObject_Extension.m in Sources */,
+				5318F0C21BF0AD8000E15581 /* EditLocator.m in Sources */,
+				5318F0C31BF0AD8000E15581 /* ELModel.m in Sources */,
+				5318F0C51BF0AD8000E15581 /* NSObject_Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +291,7 @@
 				5318F0BA1BF0ACB200E15581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

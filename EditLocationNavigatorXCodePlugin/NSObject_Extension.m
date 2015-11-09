@@ -1,14 +1,14 @@
 //
 //  NSObject_Extension.m
-//  EditLocationNavigatorXCodePlugin
+//  EditLocator
 //
-//  Created by LevinYan on 15/11/9.
+//  Created by LevinYan on 15/11/4.
 //  Copyright © 2015年 LevinYan. All rights reserved.
 //
 
 
 #import "NSObject_Extension.h"
-#import "EditLocationNavigatorXCodePlugin.h"
+#import "EditLocator.h"
 
 @implementation NSObject (Xcode_Plugin_Template_Extension)
 
@@ -18,7 +18,7 @@
     NSString *currentApplicationName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
     if ([currentApplicationName isEqual:@"Xcode"]) {
         dispatch_once(&onceToken, ^{
-            sharedPlugin = [[EditLocationNavigatorXCodePlugin alloc] initWithBundle:plugin];
+            sharedPlugin = [[EditLocator alloc] initWithBundle:plugin];
         });
     }
 }
