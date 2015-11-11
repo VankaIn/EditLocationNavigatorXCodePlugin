@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EditLocationNavigatorXCodePlugin/ELModel.m"
-            timestampString = "468819507.808803"
+            timestampString = "468901936.386581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "-addEditItem:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EditLocationNavigatorXCodePlugin/ELModel.m"
-            timestampString = "468819507.808803"
+            timestampString = "468901936.386581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "-getHistoryEditItem:"
             landmarkType = "5">
          </BreakpointContent>

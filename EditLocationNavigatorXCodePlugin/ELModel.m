@@ -256,9 +256,6 @@ static const NSUInteger kDefaultHistoryMax = 100;
 }
 
 
-
-
-
 - (void)moveToLastEdit
 {
     self.index = self.historyEditItem.count;
@@ -300,6 +297,7 @@ static const NSUInteger kDefaultHistoryMax = 100;
     
     return item;
 }
+
 - (BOOL)validateMenuItem:(EL_Orient)orient
 {
     if(self.historyEditItem.count == 0)

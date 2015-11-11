@@ -74,27 +74,15 @@ static  NSString *const kGoBackTitle = @"Go Back";
 - (void)setMenu
 {
     NSMenu *navMenu = [[[NSApp mainMenu] itemWithTitle:@"Navigate"] submenu];
-    
     NSMenuItem *goForwardMenuItem = [navMenu itemWithTitle:kGoForwardTitile];
     NSMenuItem *goBackMenuItem = [navMenu itemWithTitle:kGoBackTitle];
-    NSUInteger index = [navMenu indexOfItem:goForwardMenuItem];
- 
     
-    unichar leftArrowKey = NSLeftArrowFunctionKey;
-    unichar rightArrrowKey = NSRightArrowFunctionKey;
-    
-    NSMenuItem *newGoForwardMenuItem = [[NSMenuItem alloc] initWithTitle:kGoForwardTitile action:@selector(goFoward) keyEquivalent:[NSString stringWithCharacters:&rightArrrowKey length:1]];
-    NSMenuItem *newGoBackMenuItem = [[NSMenuItem alloc] initWithTitle:kGoBackTitle action:@selector(goBack) keyEquivalent:[NSString stringWithCharacters:&leftArrowKey length:1]];
-    [newGoForwardMenuItem setKeyEquivalentModifierMask: NSControlKeyMask|NSCommandKeyMask];
-    [newGoBackMenuItem setKeyEquivalentModifierMask: NSControlKeyMask|NSCommandKeyMask];
-    newGoForwardMenuItem.target = self;
-    newGoBackMenuItem.target = self;
-    
-    [navMenu insertItem:newGoForwardMenuItem atIndex:index];
-    [navMenu insertItem:newGoBackMenuItem atIndex:index+1];
-
-    [navMenu removeItem:goForwardMenuItem];
-    [navMenu removeItem:goBackMenuItem];
+    goForwardMenuItem.title = @"Go Forward";
+    goBackMenuItem.title = @"Go Back";
+    goForwardMenuItem.target = self;
+    goForwardMenuItem.action = @selector(goFoward);
+    goBackMenuItem.target = self;
+    goBackMenuItem.action = @selector(goBack);
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem
