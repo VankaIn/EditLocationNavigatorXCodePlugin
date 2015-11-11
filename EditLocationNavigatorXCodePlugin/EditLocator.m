@@ -76,9 +76,7 @@ static  NSString *const kGoBackTitle = @"Go Back";
     NSMenu *navMenu = [[[NSApp mainMenu] itemWithTitle:@"Navigate"] submenu];
     NSMenuItem *goForwardMenuItem = [navMenu itemWithTitle:kGoForwardTitile];
     NSMenuItem *goBackMenuItem = [navMenu itemWithTitle:kGoBackTitle];
-    
-    goForwardMenuItem.title = @"Go Forward";
-    goBackMenuItem.title = @"Go Back";
+ 
     goForwardMenuItem.target = self;
     goForwardMenuItem.action = @selector(goFoward);
     goBackMenuItem.target = self;
