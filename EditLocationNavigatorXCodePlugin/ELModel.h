@@ -37,7 +37,7 @@ typedef NS_ENUM(NSUInteger, EL_Orient)
 
 + (NSDocument*)currentSourceCodeDocument;
 
-+ (BOOL)openItem:(ELEditItem*)item;
+- (void)openItem:(ELEditItem*)item;
 
 - (void)addEditItem:(ELEditItem*)item;
 

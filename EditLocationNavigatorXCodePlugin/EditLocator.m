@@ -65,7 +65,7 @@ static  NSString *const kGoBackTitle = @"Go Back";
         
         IDESourceTextView *sourceTextView =  notification.object;
         NSDocument *document = [ELModel currentSourceCodeDocument];
-        ELEditItem *item = [[ELEditItem alloc] initWithFilePath:document.fileURL.absoluteString line:sourceTextView._currentLineNumber];
+        ELEditItem *item = [[ELEditItem alloc] initWithFilePath:[document.fileURL path] line:sourceTextView._currentLineNumber];
         [self.model addEditItem:item];
         self.isEditing = YES;
     }
@@ -85,10 +85,8 @@ static  NSString *const kGoBackTitle = @"Go Back";
     
     NSMenuItem *newGoForwardMenuItem = [[NSMenuItem alloc] initWithTitle:kGoForwardTitile action:@selector(goFoward) keyEquivalent:[NSString stringWithCharacters:&rightArrrowKey length:1]];
     NSMenuItem *newGoBackMenuItem = [[NSMenuItem alloc] initWithTitle:kGoBackTitle action:@selector(goBack) keyEquivalent:[NSString stringWithCharacters:&leftArrowKey length:1]];
-    
     [newGoForwardMenuItem setKeyEquivalentModifierMask: NSControlKeyMask|NSCommandKeyMask];
     [newGoBackMenuItem setKeyEquivalentModifierMask: NSControlKeyMask|NSCommandKeyMask];
-    
     newGoForwardMenuItem.target = self;
     newGoBackMenuItem.target = self;
     
@@ -113,11 +111,11 @@ static  NSString *const kGoBackTitle = @"Go Back";
 }
 - (void)goFoward
 {
-    [ELModel openItem:[self.model getHistoryEditItem:EL_OrientForward]];
+    [self.model openItem:[self.model getHistoryEditItem:EL_OrientForward]];
 }
 - (void)goBack
 {
-    [ELModel openItem:[self.model getHistoryEditItem:EL_OrientBack]];
+    [self.model openItem:[self.model getHistoryEditItem:EL_OrientBack]];
 }
 - (void)didApplicationFinishLaunchingNotification:(NSNotification*)noti
 {

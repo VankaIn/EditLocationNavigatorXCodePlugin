@@ -19,7 +19,6 @@
 @interface IDEStructureNavigator : NSObject
 @property (retain) NSArray* selectedObjects;
 @end
-
 @interface IDENavigableItemCoordinator : NSObject
 - (id)structureNavigableItemForDocumentURL:(id)arg1 inWorkspace:(id)arg2 error:(id*)arg3;
 @end
@@ -39,7 +38,6 @@
 + (id)editorDocumentForNavigableItem:(id)arg1;
 + (id)retainedEditorDocumentForNavigableItem:(id)arg1 error:(id*)arg2;
 + (void)releaseEditorDocument:(id)arg1;
-
 @end
 
 @interface IDESourceCodeDocument : NSDocument
@@ -120,13 +118,19 @@ static const NSUInteger kDefaultHistoryMax = 100;
     return self;
 }
 
++ (IDEWorkspaceWindowController*)currentWorkspaceWindowController
+{
+    NSWindowController* currentWindowController = [[NSApp mainWindow] windowController];
+    if ([currentWindowController isKindOfClass:NSClassFromString(@"IDEWorkspaceWindowController")]) {
+        return (IDEWorkspaceWindowController*)currentWindowController;
+    }
+    return  nil;
+}
+
 + (id)currentEditor
 {
-    NSWindowController* currentWindowController =
-    [[NSApp mainWindow] windowController];
-    if ([currentWindowController
-         isKindOfClass:NSClassFromString(@"IDEWorkspaceWindowController")]) {
-        IDEWorkspaceWindowController* workspaceController = (IDEWorkspaceWindowController*)currentWindowController;
+    IDEWorkspaceWindowController *workspaceController = [ELModel currentWorkspaceWindowController];
+    if(workspaceController){
         IDEEditorArea* editorArea = [workspaceController editorArea];
         IDEEditorContext* editorContext = [editorArea lastActiveEditorContext];
         return [editorContext editor];
@@ -170,7 +174,7 @@ static const NSUInteger kDefaultHistoryMax = 100;
 
 
 
-+ (void)highlightItem:(ELEditItem*)item inTextView:(NSTextView*)textView
+- (void)highlightItem:(ELEditItem*)item inTextView:(NSTextView*)textView
 {
     NSUInteger lineNumber = item.line - 1;
     NSString* text = [textView string];
@@ -199,7 +203,7 @@ static const NSUInteger kDefaultHistoryMax = 100;
     [textView setSelectedRange:range];
 }
 
-+ (BOOL)openItem:(ELEditItem*)item
+- (void)openItem:(ELEditItem*)item
 {
     
     NSWindowController* currentWindowController =
@@ -212,17 +216,22 @@ static const NSUInteger kDefaultHistoryMax = 100;
         id<NSApplicationDelegate> appDelegate = (id<NSApplicationDelegate>)[NSApp delegate];
         if ([appDelegate application:NSApp openFile:item.filePath]) {
             
-            IDESourceCodeEditor* editor = [ELModel currentEditor];
-            if ([editor isKindOfClass:NSClassFromString(@"IDESourceCodeEditor")]) {
-                NSTextView* textView = editor.textView;
-                if (textView) {
-                    
-                    [self highlightItem:item inTextView:textView];
-                    
-                    return YES;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                IDESourceCodeEditor* editor = [ELModel currentEditor];
+                if ([editor isKindOfClass:NSClassFromString(@"IDESourceCodeEditor")]) {
+                    NSTextView* textView = editor.textView;
+                    if (textView) {
+                        [self highlightItem:item inTextView:textView];
+                        
+                    }
                 }
-            }
+                
+            });
+            
+            
         }
+        return;
     }
     
     // open the file
@@ -242,10 +251,8 @@ static const NSUInteger kDefaultHistoryMax = 100;
         [theScript performSelectorInBackground:@selector(executeAndReturnError:)
                                     withObject:nil];
         
-        return NO;
     }
     
-    return result;
 }
 
 
@@ -312,4 +319,6 @@ static const NSUInteger kDefaultHistoryMax = 100;
     
     return NO;
 }
+
+
 @end
